@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tgsupportbot"
+version = "0.0.0"
+authors = [{ name="sfan5", email="sfan5@live.de" }]
+# description = ""
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = [
+	# max restriction due to deprecations
+	"pyTelegramBotAPI==4.22.0"
+]
+
+[project.scripts]
+tgsupportbot = "supportbot.__main__:nmain"
