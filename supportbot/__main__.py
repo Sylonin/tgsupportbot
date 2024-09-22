@@ -49,6 +49,7 @@ def main(configpath, loglevel=logging.INFO):
 		logging.info("Interrupted, exiting")
 		db.close()
 		os._exit(1)
+
 def nmain():
 	try:
 		opts, args = getopt.getopt(sys.argv[1:], "hqc:", ["help"])
@@ -72,6 +73,4 @@ def nmain():
 		configpath = readopt("-c")
 
 	# Run the actual program
-
-if __name__ == "__main__":
-	nmain()
+	main(configpath, loglevel)
